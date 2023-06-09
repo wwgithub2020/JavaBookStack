@@ -12,6 +12,7 @@
     <modules>
         <module>boot-mybatis-plus</module>
         <module>boot-spring-security</module>
+        <module>boot-skywalking</module>
     </modules>
 
     <properties>

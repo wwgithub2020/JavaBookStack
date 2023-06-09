@@ -1,7 +1,9 @@
 package cn.itcoder.service.impl;
 
+import cn.itcoder.commons.PageResult;
 import cn.itcoder.model.datasource.UserDO;
 import cn.itcoder.model.mapper.UserMapper;
+import cn.itcoder.model.vo.UserReqVO;
 import cn.itcoder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,5 +37,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDO selectUserById(Long id) {
         return userMapper.selectById(id);
+    }
+
+    @Override
+    public PageResult<UserDO> selectUserPage(UserReqVO userReqVO) {
+        return userMapper.selectUserPage(userReqVO);
     }
 }
